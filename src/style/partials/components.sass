@@ -1,0 +1,60 @@
+.components
+	&__title
+		text-align: center
+		margin-bottom: 5px
+	&__desc
+		margin-bottom: 60px
+		text-align: center
+		color: #313e47
+	.item
+		background: white
+		box-shadow: 0 0 10px 0 rgba(59,117,111,.4)
+		border-radius: 5px
+		padding: 160px 15px 15px
+		text-align: center
+		position: relative
+		max-width: 370px
+		margin: auto
+		+nlt
+			margin-bottom: 60px
+		.img-wrap
+			margin-bottom: 20px
+		&__img
+			border: 4px solid #bde6e2
+			border-radius: 50%
+			position: absolute
+			&--1
+				top: -40px
+				left: 50%
+				transform: translateX(-50%)
+				z-index: 3
+			&--2
+				top: 30px
+				left: 60px
+				z-index: 1
+			&--3
+				top: 30px
+				right: 60px
+				z-index: 2
+		&__ttl
+			color: #313e47
+			font-weight: 500
+			font-size: 18px
+			min-height: 60px
+			margin-bottom: 25px
+			padding-bottom: 25px
+			border-bottom: 1px solid #e6e5e5
+			position: relative
+			.fico
+				position: absolute
+				bottom: -10px
+				left: 50%
+				transform: translateX(-50%)
+				color: #199489
+				background: white
+				padding: 0 10px
+				font-size: 20px
+		&__result
+			color: #199489
+			line-height: 1.2
+			font-weight: 500
