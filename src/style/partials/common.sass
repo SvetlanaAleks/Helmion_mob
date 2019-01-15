@@ -1,7 +1,18 @@
+html
+	font-family: sans-serif
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
 body
-	background: $mainColor
-	font-family: Arial, Helvetica, sans-serif
-	font-size: 14px
+	line-height: normal
+	width: 480px
+	margin: 0 auto
+	font-size: 16px
+	min-width: 320px
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+.menu, body
+	position: relative
+
 
 // Font icons
 .fico
@@ -10,3 +21,77 @@ body
 	&::before
 		display: block
 
+ul
+	list-style: none
+
+select:-moz-focusring, a:-moz-focusring
+	color: transparent
+	text-shadow: 0 0 0 #000
+
+*
+	&:focus, &:visited, &:active, &:hover
+		outline: 0 !important
+
+a
+	outline: 0 !important
+	&:focus, &:visited, &:active, &:hover
+		outline: 0 !important
+
+*::-moz-focus-inner
+	border: 0
+	outline: none
+
+
+.font-bold
+	font-weight: 700
+.jade
+	color: #199489
+
+.block
+	padding: 20px 0
+	width: 480px
+	margin: 0 auto
+.title
+	font-size: 25px
+	margin: 0 auto
+	font-weight: 700
+	line-height: 1
+.wrapper
+	padding: 0 10px
+.slick-list
+	width: 80%
+	margin: auto
+.arr
+	transition: all .5s
+	cursor: pointer
+	position: absolute
+	top: 44%
+	transform: translateY(-50%)
+	z-index: 5
+	.fico
+		color: #06a8ce
+		font-size: 26px
+	&:hover, &:focus
+		color: black
+		.fico
+			color: black
+	&--right
+		right: 0px
+	&--left
+		left: 0px
+		.fico
+			transform: rotate(180deg)
+.slick-dots
+	display: flex
+	justify-content: center
+	li
+		cursor: pointer
+		height: 12px
+		width: 12px
+		border-radius: 50%
+		background-color: #b6dfe9
+		margin: 5px
+	.slick-active
+		background-color: #06a8ce
+	button
+		display: none

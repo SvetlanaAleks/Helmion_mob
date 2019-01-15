@@ -1,0 +1,344 @@
+.fix
+	position: fixed
+	width: 480px
+	max-height: 100%
+	top: 0
+	left: calc(50% - 240px)
+	z-index: 11
+	overflow: auto
+	&__line
+		position: fixed
+		top: 0
+		width: 480px
+		z-index: 1
+		left: calc(50% - 240px)
+	&__price
+		background: #d4d4d4
+		padding: 10px 0
+		text-align: center
+		position: relative
+		.x_price_current, .x_currency
+			font-weight: bold
+	&__btn
+		background: 0 0
+		border: none
+		font-size: 30px
+		line-height: .7
+		transition: .5s
+		position: absolute
+		top: 7px
+		right: 5px
+		color: #294731
+		cursor: pointer
+		&:hover
+			color: #fd7532
+.menu
+	margin-top: 34px
+	border: none
+	display: none
+	width: 100%
+	background: #f0f0f0
+	border-top: 1px solid #fff
+	padding-bottom: 5px
+	.link
+		display: block
+		width: 100%
+		padding: 15px 0
+		text-align: center
+		font-size: 16px
+		color: #444
+		text-decoration: none
+		font-weight: 500
+		transition: .5s
+		text-transform: uppercase
+		&:hover
+			background: rgba(56, 195, 189, 0.29)
+	&__item 
+		.link.menu__bttn
+			width: 350px
+	.bttn
+		cursor: pointer
+		color: #fff
+		background: linear-gradient(to right, #fd7532 0, #fd7532 12%, #fd7532 26%, #fd7532 42%, #fd7532 61%, #fd7532 80%, #fd7532 100%)
+		margin: 0 auto 15px
+		transition: 0s
+		&:hover
+			background: linear-gradient(to right, #ffa800 0, #ffa000 12%, #f90 26%, #ff8f00 42%, #ff8300 61%, #ff7801 80%, #ff6b00 100%)
+.header
+	padding-top: 50px
+	padding-bottom: 20px
+	background: url('../img/bg.jpg') no-repeat center
+	background-size: cover
+	text-align: center
+	position: relative
+	&__title
+		font-size: 32px
+		margin-bottom: 21px
+	&__list
+		width: 320px
+		margin: auto
+		counter-reset: section
+		margin-bottom: 41px
+		text-align: left
+		.item
+			line-height: 1.2
+			padding-left: 60px
+			color: #313e47
+			position: relative
+			+nlt
+				margin-bottom: 20px
+			.font-bold
+				color: #28353e
+			&::before
+				content: counter(section)
+				counter-increment: section
+				display: block
+				position: absolute
+				width: 47px
+				height: 47px
+				border-radius: 5px
+				background: #199489
+				left: 0
+				top: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 30px
+				font-weight: 900
+				color: white
+	.product
+		width: 380px
+		max-width: 100%
+		margin-bottom: 20px
+	.img-info
+		position: absolute
+		padding: 5px 10px
+		background: #199489
+		border-radius: 30px
+		width: 250px
+		text-align: center
+		color: white
+		line-height: 30px
+		font-weight: 700
+		top: 302px
+		left: 40px
+		z-index: 10
+
+.order-form
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: relative
+.form
+	background: #fff
+	width: 442px
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.07), 0 0 0 6px #fff
+	border-radius: 3px
+	padding: 15px
+	&__price
+		display: flex
+		height: auto
+		justify-content: center
+		&__old
+			color: #777
+			padding: 15px 0 0
+			width: 102px
+			&__text
+				text-align: center
+				font-size: 13px
+				margin: 0 0 7px
+			&__value
+				color: #999
+				font-size: 34px
+				display: flex
+				align-items: baseline
+				justify-content: center
+				position: relative
+				line-height: 28px
+				&:after
+					content: ""
+					position: absolute
+					height: 1px
+					width: 86%
+					background: #d32f19
+					top: 11px
+					left: 10px
+				&:before
+					height: 1px
+					width: 86%
+					background: #d32f19
+					content: ""
+					position: absolute
+					top: 11px
+					left: 10px
+					-webkit-transform: rotate(15deg)
+					-ms-transform: rotate(15deg)
+					transform: rotate(15deg)
+				&:after
+					-webkit-transform: rotate(-15deg)
+					-ms-transform: rotate(-15deg)
+					transform: rotate(-15deg)
+				.currency
+					font-size: 16px
+
+.form
+	&__price
+		&__new
+			color: #fd7532
+			padding: 15px 0 0
+			width: 102px
+			margin-left: 22px
+			&__text
+				text-align: center
+				font-size: 13px
+				margin: 0 0 7px
+				color: #777
+			&__value
+				font-size: 34px
+				font-weight: 900
+				display: flex
+				align-items: baseline
+				justify-content: center
+				position: relative
+				line-height: 28px
+				.currency
+					font-size: 16px
+	&__lastpack
+		font-size: 16px
+		text-align: left
+		margin: 16px 0
+		display: flex
+		-webkit-box-align: center
+		align-items: center
+		width: 100%
+	.discount
+		background: url(../img/discount.png) no-repeat
+		width: 75px
+		height: 75px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #000000
+		font-size: 28px
+		font-weight: 900
+		position: absolute
+		top: 19px
+		left: 20px
+		background-size: cover
+	&__lastpack
+		font-size: 16px
+		text-align: left
+		margin: 16px 0
+		display: flex
+		align-items: center
+		justify-content: space-around
+		width: 100%
+		.orange
+			color: #00a5cb
+			position: relative
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				width: 1px
+				height: 30px
+				background: #ababab
+				right: -27px
+				top: 5px
+.procent-mob
+	font-weight: 900
+	font-size: 21px
+	text-shadow: -1px -1px 0 #00a5cb, 1px -1px 0 #00a5cb, -1px 1px 0 #00a5cb, 1px 1px 0 #00a5cb
+	margin-left: -5px
+.attention
+	width: 387px
+	margin: auto 0
+	padding-left: 89px
+	font-size: 17px
+	color: #00a5cb
+	text-align: left
+	font-weight: 700
+
+
+.form .frm .input, .name-i, .phone-i
+	position: relative
+	width: 100%
+	box-sizing: border-box
+
+.lastpack__cls
+	font-size: 30px
+	margin-right: 15px
+	font-weight: 700
+
+.count
+	font-size: 15px
+
+.form .frm
+	display: flex
+	flex-direction: column
+	position: relative
+	.input
+		font-size: 16px
+		color: #212121
+		padding: 14px 10px 14px 53px
+		border: none
+		background-color: #f1f1f1
+		margin: 14px 0 0
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, .04)
+		transition: .3s
+		&:focus, &:hover
+			box-shadow: inset 0 0 10px #e4e4e4
+			transition: 0.3s
+.name-i,.phone-i
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		z-index: 2
+.name-i
+	&:before
+		background: url(../img/name.svg) center no-repeat
+		width: 19px
+		height: 25px
+		top: 24px
+		left: 17px
+.phone-i
+	&:before
+		background: url(../img/phone.svg) center no-repeat
+		background-size: 22px
+		width: 26px
+		height: 30px
+		top: 23px
+		left: 15px
+.protect
+	color: #666
+	font-size: 15px
+	display: flex
+	justify-content: center
+	margin-top: 16px
+	margin-bottom: 16px
+	align-items: center
+	span
+		margin-left: 8px
+
+.order_btn
+	width: 100%
+	background: #fd7532
+	height: 56px
+	border-radius: 5px
+	border: 1px solid #fe9133
+	font-weight: 700
+	padding: 0
+	font-size: 30px
+	line-height: 17px
+	cursor: pointer
+	color: #fff
+	position: relative
+	margin-bottom: 13px
+	&:hover
+		background: linear-gradient(to right, #ffa800 0, #ffa000 12%, #f90 26%, #ff8f00 42%, #ff8300 61%, #ff7801 80%, #ff6b00 100%)
+.order-curse 
+	text-align: center
+strong
+	font-weight: bold
