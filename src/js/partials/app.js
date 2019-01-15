@@ -35,9 +35,23 @@ const App = (function () {
             adaptiveHeight: true
          });
       },
+      sliderInfectionInit: function () {
+         $('.infection__content').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: "linear",
+            prevArrow: '<div class="arr arr--left"><i class="fico fico-arrow"></i></div>',
+            nextArrow: '<div class="arr arr--right"><i class="fico fico-arrow"></i></div>',
+            autoplay: false,
+            adaptiveHeight: true
+         });
+      },
       init: function () {
          App.scrollToTarget('.js-scroll', 700);
          App.sliderReviewsInit();
+         App.sliderInfectionInit();
       },
    };
 })();
